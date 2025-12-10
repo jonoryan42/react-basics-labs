@@ -1,5 +1,5 @@
 import React from "react";
-
+    
 const AddTaskForm = (props) => {
 
   return (
@@ -19,6 +19,19 @@ const AddTaskForm = (props) => {
             Details:
             <input type="text" name="description" onChange={(event) => props.change(event)} />
         </label>
+        <br />
+        <label>
+        Priority:
+        <select 
+         name="priority" 
+         onChange={(event) => props.change(event)} 
+         defaultValue="Medium"
+  >
+    <option value= "High">High</option>
+    <option value= "Medium">Medium</option>
+    <option value= "Low">Low</option>
+  </select>
+</label>
         <input type="submit" value="Submit" />
         </form>
     </div>
